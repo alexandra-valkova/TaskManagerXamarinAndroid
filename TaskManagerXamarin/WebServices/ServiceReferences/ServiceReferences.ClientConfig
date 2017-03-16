@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <system.serviceModel>
+    <bindings>
+      <basicHttpBinding>
+        <binding name="BasicHttpBinding_IBaseServicesOf_UserModel"
+              maxBufferSize="2147483647" maxReceivedMessageSize="2147483647">
+          <security mode="None" />
+        </binding>
+        <binding name="BasicHttpBinding_IBaseServicesOf_TaskModel"
+              maxBufferSize="2147483647" maxReceivedMessageSize="2147483647">
+          <security mode="None" />
+        </binding>
+        <binding name="BasicHttpBinding_IBaseServicesOf_LogworkModel"
+            maxBufferSize="2147483647" maxReceivedMessageSize="2147483647">
+          <security mode="None" />
+        </binding>
+        <binding name="BasicHttpBinding_IBaseServicesOf_CommentModel"
+            maxBufferSize="2147483647" maxReceivedMessageSize="2147483647">
+          <security mode="None" />
+        </binding>
+      </basicHttpBinding>
+    </bindings>
+    <client>
+      <endpoint address="http://localhost:58371/WcfServices/UserServices.svc"
+            binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IBaseServicesOf_UserModel"
+            contract="IBaseServicesOf_UserModel" name="BasicHttpBinding_IBaseServicesOf_UserModel" />
+      <endpoint address="http://localhost:58371/WcfServices/TaskServices.svc"
+            binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IBaseServicesOf_TaskModel"
+            contract="IBaseServicesOf_TaskModel" name="BasicHttpBinding_IBaseServicesOf_TaskModel" />
+      <endpoint address="http://localhost:58371/WcfServices/LogworkServices.svc"
+          binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IBaseServicesOf_LogworkModel"
+          contract="IBaseServicesOf_LogworkModel" name="BasicHttpBinding_IBaseServicesOf_LogworkModel" />
+      <endpoint address="http://localhost:58371/WcfServices/CommentServices.svc"
+            binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IBaseServicesOf_CommentModel"
+            contract="IBaseServicesOf_CommentModel" name="BasicHttpBinding_IBaseServicesOf_CommentModel" />
+    </client>
+    <extensions />
+  </system.serviceModel>
+</configuration>
