@@ -1,1 +1,0 @@
-<resources><string name="ApplicationName">TaskManagerAndroid</string><string name="status_prompt">Status</string><string-array name="status_array"><item>Pending</item><item>Done</item></string-array></resources>

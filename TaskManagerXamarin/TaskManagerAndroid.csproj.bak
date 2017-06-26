@@ -16,7 +16,7 @@
     <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
     <AndroidUseLatestPlatformSdk>True</AndroidUseLatestPlatformSdk>
-    <TargetFrameworkVersion>v6.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v7.0</TargetFrameworkVersion>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -52,22 +52,68 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EditActivity.cs" />
-    <Compile Include="MainActivity.cs" />
+    <Compile Include="Activities\Comments\CommentCreateActivity.cs" />
+    <Compile Include="Activities\Logworks\LogworkCreateActivity.cs" />
+    <Compile Include="Activities\Tasks\ResponsibleSpinnerAdapter.cs" />
+    <Compile Include="AuthenticationService.cs" />
+    <Compile Include="WebServiceClientManager.cs" />
+    <Compile Include="ListAdapters\Comments\CommentListAdapter.cs" />
+    <Compile Include="Activities\Comments\CommentsActivity.cs" />
+    <Compile Include="WebServices\CommentServices.cs" />
+    <Compile Include="ListAdapters\Logworks\LogworkListAdapter.cs" />
+    <Compile Include="Activities\Logworks\LogworksActivity.cs" />
+    <Compile Include="Activities\Tasks\TaskDetailsActivity.cs" />
+    <Compile Include="Activities\Tasks\TaskEditActivity.cs" />
+    <Compile Include="ListAdapters\Tasks\TaskListAdapter.cs" />
+    <Compile Include="Activities\Users\UserEditActivity.cs" />
+    <Compile Include="Activities\MainActivity.cs" />
+    <Compile Include="Activities\MenuActivity.cs" />
+    <Compile Include="WebServices\LogworkServices.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UsersActivity.cs" />
-    <Compile Include="UserServices.cs" />
-    <Compile Include="UsersListAdapter.cs" />
+    <Compile Include="Activities\Tasks\TasksActivity.cs" />
+    <Compile Include="Activities\Users\UsersActivity.cs" />
+    <Compile Include="WebServices\TaskServices.cs" />
+    <Compile Include="ListAdapters\Users\UsersListAdapter.cs" />
+    <Compile Include="WebServices\UserServices.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="GettingStarted.Xamarin" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
-    <AndroidResource Include="Resources\layout\Edit.axml">
+    <AndroidResource Include="Resources\layout\EditUser.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
-    <None Include="ServiceReferences.ClientConfig" />
+    <AndroidResource Include="Resources\layout\Menu.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\EditTask.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\TaskDetails.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Tasks.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Users.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Logworks.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Comments.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\CreateLogwork.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\CreateComment.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <None Include="WebServices\ServiceReferences\ServiceReferences.ClientConfig">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml">
@@ -97,6 +143,30 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\toolbar.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\editTask.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\taskDetails.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\tasksList.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\logworks.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\comments.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\addComment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\addLogwork.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
