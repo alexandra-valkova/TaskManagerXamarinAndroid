@@ -1,2 +1,2 @@
 # TaskManagerXamarinAndroid
-task manager using WCF Services on Xamarin.Android
+Task manager mobile app 📱 using WCF Services on Xamarin.Android
